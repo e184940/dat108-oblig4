@@ -9,11 +9,28 @@
 <body>
 	<h2>Påmelding</h2>
 	<p style="color:red;">Påmeldingsdetaljer er ugyldige</p>
-
 	<!-- Jeg har fjernet alt som har med form og input å gjøre,
 		 siden dette er pensum. Her får dere sette opp skjemaet
 		 selv. Lykke til.
 	-->
+	<form id="regForm" action="/paameldt" method="post">
+		<label>Fornavn
+			<input name="fornavn" type="text">
+		</label>
+		<label>Etternavn
+			<input name="etternavn" type="text">
+		</label>
+		<label>Mobil
+			<input name="mobilnr" type="tel" pattern="[0-9 ]{8,20}">
+		</label>
+		<label>Passord
+			<input name="passord1" type="password" minlength="8">
+		</label>
+		<label>Gjenta passord
+			<input name="passord2" type="password" minlength="8">
+		</label>
+	</form>
+
 
 </body>
 </html>

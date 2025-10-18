@@ -1,16 +1,27 @@
 package hvl.dat108.dat108oblig4.model;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 public class Bruker {
 
-    @NotBlank(message = "Fornavn påkrevd")
+    @NotNull(message = "Fornavn påkrevd")
     private String fornavn;
 
-    @NotBlank(message = "Etternavn påkrevd")
+    @NotNull(message = "Etternavn påkrevd")
     private String etternavn;
 
+    @NotNull(message = "Mobilnummer påkrevd")
+    @Size(min = 8, max = 20, message = "Mobilnummer må være minst 8 tegn")
     private String mobilnr;
+
+    @NotNull(message = "Passord påkrevd")
+    @Size(min = 8, message = "Passord må være minst 8 tegn")
     private String passord1;
+
+    @NotNull(message = "Bekreft passord")
     private String passord2;
+
     private String kjonn;
 
     public Bruker(){}

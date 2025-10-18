@@ -8,20 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class ViewController {
 
-    @GetMapping({"/", "/paamelding"})
-    public String paamelding() {
-        return "paamelding"; // /WEB-INF/jsp/paamelding.jsp
-    }
-
     @GetMapping("/deltagerliste")
     public String deltagerliste(Model model) {
         return "deltagerliste"; // /WEB-INF/jsp/deltagerliste.jsp
     }
-
-    @GetMapping("/paameldt")
-    public String paameldt() {
-        return "paameldt";
-    }
-
 
 }

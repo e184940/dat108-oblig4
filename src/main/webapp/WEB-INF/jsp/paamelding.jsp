@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Påmelding</title>
-    <link rel="stylesheet" href="<c:url value='/css/simple.css'/>" />
+    <link rel="stylesheet" href="<c:url value='/simple.css'/>" />
 </head>
 <body>
 <h2>Påmelding</h2>

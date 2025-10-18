@@ -1,5 +1,6 @@
 package hvl.dat108.dat108oblig4.model;
 
+import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -23,6 +24,14 @@ public class Bruker {
     private String passord2;
 
     private String kjonn;
+
+    @AssertTrue(message = "Passordene må være like")
+    public boolean passordMatch(){
+        if(passord1 == null || passord2 == null){
+            return false;
+        }
+        return passord1.equals(passord2);
+    }
 
     public Bruker(){}
 
